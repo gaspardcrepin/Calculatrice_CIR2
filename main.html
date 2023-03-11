@@ -1,58 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TD1</title>
+	<title>Calculatrice</title>
 </head>
 
 <style>
-	body {
-		background-color: lightgray;
+	
+
+	button {
+		border-radius: 25px;
+		background-color: rgb(252, 246, 246);
+		width: 15%;
+		height: 40px;
+		transition: 0.5s ease-in-out;
+	}
+
+	#bloc {
+		background-color: lightgrey;
+		border: 7px;
+		border-radius: 25px;
+		width: 90%;
+		height: 300px;
+		margin: auto;
+		padding: auto;
+	}
+
+	button:hover {
+		background-color: rgb(255, 153, 0);
+	}
+
+	#bloc2 {
+		margin: auto;
+	}
+
+	#affichage {
+		margin-left: 3%;
+		margin-top: 3%;
+		padding-top: 1%;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 200%;
+	}
+	
+	#calcul {
+		margin-left: 1%;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 150%;
+	}
+
+	#egal {
+		position:fixed;
+		left:60%;
+	}
+
+	#result {
+		position:fixed;
+		right: 9%;
 	}
 </style>
 
-<script src="script.js"></script>
-<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
-
 <body>
-	<div id="texte1" style="background-color: darkgray; margin:2%;">
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet tenetur, possimus accusantium adipisci explicabo eligendi fugit quas impedit provident molestiae vero. Culpa repellendus ratione architecto! Optio necessitatibus tenetur, dolore tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deleniti placeat hic, reiciendis, ratione delectus adipisci, odit nostrum repellendus similique velit ea exercitationem fuga asperiores tenetur veniam culpa ex animi?</p>
+
+	<div id="bloc">
+		<div id="affichage">
+			<span id="left-part">Affiche</span>
+			<span id="egal">=</span>
+			<span id="result">result</span>
+		</div>
+		<br>
+
+		<div id="calcul">
+			<span id="calcul">calcul</span>
+		</div>
+		<br>
+		
+		<div id="bloc2">
+			<div class="format">
+				<button>
+					<span>7</span>
+				</button>
+				<button>
+					<span>8</span>
+				</button>
+				<button>
+					<span>9</span>
+				</button>
+				<button>
+					<span>/</span>
+				</button>
+				<button style="margin-left: 15%;">
+					<span>C</span>
+				</button>
+			</div>
+			<div class="format">
+			<button>
+				<span>4</span>
+			</button>
+			<button>
+				<span>5</span>
+			</button>
+			<button>
+				<span>6</span>
+			</button>
+			<button>
+				<span>*</span>
+			</button>
+			<button>
+				<span>(</span>
+			</button>
+			<button>
+				<span>)</span>
+			</button>
+			</div>
+			<div class="format">
+				<button>
+					<span>1</span>
+				</button>
+				<button>
+					<span>2</span>
+				</button>
+				<button>
+					<span>3</span>
+				</button>
+				<button>
+					<span>-</span>
+				</button>
+			</div>
+			<div class="format">
+				<button>
+					<span>0</span>
+				</button>
+				<button>
+					<span>.</span>
+				</button>
+				<button style="margin-left: 15%;">
+					<span>+</span>
+				</button>
+				<button style="width:30%;background-color:green;">
+					<span>=</span>
+				</button>
+			</div>
+		</div>
 	</div>
 
-	<div id="texte2" style="background-color: brown; margin:2%;">
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet tenetur, possimus accusantium adipisci explicabo eligendi fugit quas impedit provident molestiae vero. Culpa repellendus ratione architecto! Optio necessitatibus tenetur, dolore tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deleniti placeat hic, reiciendis, ratione delectus adipisci, odit nostrum repellendus similique velit ea exercitationem fuga asperiores tenetur veniam culpa ex animi?</p>
-	</div>
 
-	<div id="texte3" style="background-color: darkgreen; margin:2%;">
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet tenetur, possimus accusantium adipisci explicabo eligendi fugit quas impedit provident molestiae vero. Culpa repellendus ratione architecto! Optio necessitatibus tenetur, dolore tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deleniti placeat hic, reiciendis, ratione delectus adipisci, odit nostrum repellendus similique velit ea exercitationem fuga asperiores tenetur veniam culpa ex animi?</p>
-	</div>
-
-	<button onclick="changeColor('blue')">
-		<span>Change to Blue</span>
-	</button>
-
-	<button onclick="changeColor('red')">
-		<span>Change to Red</span>
-	</button>
-
-	<button onclick="changeColor('yellow')">
-		<span>Change to Yellow</span>
-	</button>
-
-	<br><br>
-	<input type="text" id="red">
-	<input type="text" id="green">
-	<input type="text" id="blue">
-	<button onclick="changeColor2()">
-		<span>Change color2</span>
-	</button>
-<br><br>
-	<button onclick="changeColor3('blue','red','yellow')">
-		<span>Change color3</span>
-	</button>	
 
 
 
 </body>
+
 </html>
