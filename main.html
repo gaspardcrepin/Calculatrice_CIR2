@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Calculatrice</title>
 </head>
-
+<script src="calc.js"></script>
 <style>
 	
 
@@ -39,20 +39,25 @@
 	#affichage {
 		margin-left: 3%;
 		margin-top: 3%;
+		min-height: 12%;
 		padding-top: 1%;
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 200%;
 	}
 	
-	#calcul {
+	#span-calcul {
 		margin-left: 1%;
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 150%;
 	}
 
 	#egal {
 		position:fixed;
 		left:60%;
+	}
+
+	#div-calcul {
+		min-height: 12%;
 	}
 
 	#result {
@@ -65,80 +70,80 @@
 
 	<div id="bloc">
 		<div id="affichage">
-			<span id="left-part">Affiche</span>
+			<span id="left-part"></span>
 			<span id="egal">=</span>
-			<span id="result">result</span>
+			<span id="result"></span>
 		</div>
 		<br>
 
-		<div id="calcul">
-			<span id="calcul">calcul</span>
+		<div id="div-calcul">
+			<span id="span-calcul"></span>
 		</div>
 		<br>
 		
 		<div id="bloc2">
 			<div class="format">
-				<button>
+				<button onclick="printNumber('7')">
 					<span>7</span>
 				</button>
-				<button>
+				<button onclick="printNumber('8')">
 					<span>8</span>
 				</button>
-				<button>
+				<button onclick="printNumber('9')">
 					<span>9</span>
 				</button>
-				<button>
+				<button onclick="printNumber('/')">
 					<span>/</span>
 				</button>
-				<button style="margin-left: 15%;">
+				<button style="margin-left: 15%;" onclick="erase()">
 					<span>C</span>
 				</button>
 			</div>
 			<div class="format">
-			<button>
+			<button onclick="printNumber('4')">
 				<span>4</span>
 			</button>
-			<button>
+			<button onclick="printNumber('5')">
 				<span>5</span>
 			</button>
-			<button>
+			<button onclick="printNumber('6')">
 				<span>6</span>
 			</button>
-			<button>
+			<button onclick="printNumber('*')">
 				<span>*</span>
 			</button>
-			<button>
+			<button onclick="printNumber('(')">
 				<span>(</span>
 			</button>
-			<button>
+			<button onclick="printNumber(')')">
 				<span>)</span>
 			</button>
 			</div>
 			<div class="format">
-				<button>
+				<button onclick="printNumber('1')">
 					<span>1</span>
 				</button>
-				<button>
+				<button onclick="printNumber('2')">
 					<span>2</span>
 				</button>
-				<button>
+				<button onclick="printNumber('3')">
 					<span>3</span>
 				</button>
-				<button>
+				<button onclick="printNumber('-')">
 					<span>-</span>
 				</button>
 			</div>
 			<div class="format">
-				<button>
+				<button onclick="printNumber('0')">
 					<span>0</span>
 				</button>
-				<button>
+				<button onclick="printNumber('.')">
 					<span>.</span>
 				</button>
-				<button style="margin-left: 15%;">
+				<button style="margin-left: 15%;" onclick="printNumber('+')">
 					<span>+</span>
 				</button>
-				<button style="width:30%;background-color:green;">
+				<button style="width:30%;background-color:green;" onclick="result()">
 					<span>=</span>
 				</button>
 			</div>
