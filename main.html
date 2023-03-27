@@ -38,7 +38,10 @@
 				<button onclick="baseCalculator.printNumber('/')">
 					<span>/</span>
 				</button>
-				<button style="margin-left: 15%;" onclick="baseCalculator.erase()">
+				<button onclick="baseCalculator.erase_single()">
+					<span>supp</span>
+				</button>
+				<button onclick="baseCalculator.erase()">
 					<span>C</span>
 				</button>
 			</div>
@@ -74,6 +77,9 @@
 				</button>
 				<button onclick="baseCalculator.printNumber('-')">
 					<span>-</span>
+				</button>
+				<button onclick="baseCalculator.precedent()">
+					<span>prec</span>
 				</button>
 			</div>
 			<div class="format">
