@@ -1,4 +1,4 @@
-console.log("Gaspard's log test")
+console.log("Gaspard's log test") // Test initial
 
 class Calculatrice{
     constructor(){
